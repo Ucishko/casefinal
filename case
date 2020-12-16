@@ -1,0 +1,20 @@
+years = 'Срок размещения капитала (лет):'
+initial_capital = 'Начальный капитал ($):'
+percent = 'Процентная ставка (%/мес.):'
+investment_infusion = 'Инвестиционный вливания ($/мес.):'
+print('Добро пожаловать дорогой пользователь')
+years = int(input(years))
+initial_capital = float(input(initial_capital))
+percent = float(input(percent))
+per = (percent / 100 + 1)
+investment_infusion = float(input(investment_infusion))
+for year in range (1, years + 1):
+    print(year,"год")
+    print("-" * 43)
+    print ("|       |   основа   | сумма %  |         |")
+    print ("| месяц | инвестиций | за месяц | капитал |")
+    print("-" * 43)
+    for month in range (12):
+        print("|{:<5}|".format(round(month+1, 2))+"{:<12}".format(round(initial_capital, 2))+"|{:<12}|".format(round(initial_capital* per - initial_capital, 2))+"{:<8}|".format(round(initial_capital* per, 2)))
+        print()
+        initial_capital = initial_capital* per + investment_infusion
