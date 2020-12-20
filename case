@@ -1,3 +1,5 @@
+Developers: Gorevoy 50%
+            Bricheev 50%
 years = 'Срок размещения капитала (лет):'
 initial_capital = 'Начальный капитал ($):'
 percent = 'Процентная ставка (%/мес.):'
